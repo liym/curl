@@ -4,7 +4,7 @@ $curl = new Scurl();
 $curl->url='http://www.heiyan.com/accounts/login';
 $curl->cookie='heiyan';
 $curl->post['email'] = 'aimimi1988@gmail.com';
-$curl->post['password']='123654';
+$curl->post['password']='';
 //$curl->post['backUrl']='/book/10903/573205';
 $curl->debug=true;
 $curl->saveCookie();
