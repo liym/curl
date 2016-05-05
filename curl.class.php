@@ -11,6 +11,7 @@
 class Scurl{
 
 	public $isproxy = true;
+	public $isAutoProxy = false;
 	public $proxy='proxy.jgb:8081'; // 192.168.0.1:88@hexin:hx300033 代理用@来切割 自动代理请填写 auto
     public $proxyfile = 'proxy.list';
 	public $referer='';
@@ -25,6 +26,7 @@ class Scurl{
 	public $cookiepath = '/tmp/';
 	public $cookieotime = 3600;//cookie 超时时间 默认3600秒
 	public $maxtime = 60;//设置最大超时间 默认为60秒
+	public $proxyArr = [];
 	
 	
 	
@@ -72,6 +74,7 @@ class Scurl{
 		$res = $this->ppopen($cmd);
 		if(preg_match('/HTTP\/\d+\.\d+\s+(\d+)\s+\w+\n?/is',$res,$m)){
 			echo $m[1];
+			return $m[1];
 		}
 		//echo $res;
 	}
@@ -124,15 +127,17 @@ class Scurl{
 	 */
 	private function __proxy(){
 		if($this->isproxy && $this->proxy){
-			if(strtolower($this->proxy)=='auto'){
+			if($this->isAutoProxy){
 				//自动随机代理
-				if(file_exists($this->proxyfile)){
-					$proxyArr = file($this->proxyfile);
-					$max=count($proxyArr)-1;
-					$this->proxy = trim($proxyArr[rand(0,$max)]);
-				}else{
-					exit('自动代理请先在当前目录配置代理文件 proxy.list 格式为host:port@user:pass 或 host:port');
+				if(empty($this->proxyArr)) {
+					if(file_exists($this->proxyfile)){
+						$this->proxyArr = file($this->proxyfile);
+					}else{
+						exit('自动代理请先在当前目录配置代理文件 proxy.list 格式为host:port@user:pass 或 host:port');
+					}
 				}
+				$max=count($this->proxyArr)-1;
+				$this->proxy = trim($this->proxyArr[rand(0,$max)]);
 			}
 			$proxyinfo=explode('@',$this->proxy);
 			if(isset($proxyinfo[1])){
