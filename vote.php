@@ -1,5 +1,6 @@
 <?php
-require_once 'curl.class.php';
+$root = dirname(__FILE__);
+require_once $root.'/curl.class.php';
 $curl = new Scurl();
 $curl->debug = true;
 $curl->isproxy = true;
@@ -12,14 +13,9 @@ while(true) {
     //$curl->url = 'http://vote.ecloud-zj.com/wx/voteSubmit';
     $html = $curl->request('http://vote.ecloud-zj.com/wx/voteSubmit');
     if ($html==1) {
-        echo "成功\n";
+        echo "成功".date("Y-m-d H:i:s \n");
     } else {
-        echo "失败原因".$html."\n";
-    }
-    echo date("Y-m-d H:i:s ")."\n";
-    usleep(500);
-    if ($i>1500) {
-        break;
+        echo "失败原因".date("Y-m-d H:i:s ").$html."\n";
     }
     $i++;
 }

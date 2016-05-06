@@ -13,7 +13,7 @@ class Scurl{
 	public $isproxy = true;
 	public $isAutoProxy = false;
 	public $proxy='proxy.jgb:8081'; // 192.168.0.1:88@hexin:hx300033 代理用@来切割 自动代理请填写 auto
-    public $proxyfile = 'proxy.list';
+    public $proxyfile = '/proxy.list';
 	public $referer='';
     public $agent='Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.94 Safari/537.36';
     public $post; // post 参数 array or str
@@ -130,8 +130,9 @@ class Scurl{
 			if($this->isAutoProxy){
 				//自动随机代理
 				if(empty($this->proxyArr)) {
-					if(file_exists($this->proxyfile)){
-						$this->proxyArr = file($this->proxyfile);
+					$root = dirname(__FILE__);
+					if(file_exists($root.$this->proxyfile)){
+						$this->proxyArr = file($root.$this->proxyfile);
 					}else{
 						exit('自动代理请先在当前目录配置代理文件 proxy.list 格式为host:port@user:pass 或 host:port');
 					}
