@@ -8,10 +8,11 @@ $proxy = file('proxy.test.list');
 $i = 0;
 $proxyB = [];
 while(true) {
-
+    echo ".";
 	$proxyA = trim($proxy[$i]);
 	$curl->proxy = $proxyA;
-	$curl->url = 'http://1212.ip138.com/ic.asp';
+	//$curl->url = 'http://1212.ip138.com/ic.asp';
+    $curl->url = 'http://vote.ecloud-zj.com/wx/votetop';
 	$html = $curl->getStatus();
 	if ($html == 200) {
 		$proxyB[] = $proxyA;
