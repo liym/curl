@@ -10,6 +10,7 @@ $opt = getopt('x:');
 $curl->proxyNum = isset($opt['x']) ? $opt['x'] : null;
 $i = 0;
 
+$error = 0;
 while(true) {
     $isSleep = false;
     $curl->post['cc'] = 25;
@@ -19,6 +20,9 @@ while(true) {
     if ($html==1) {
         echo "成功".date("Y-m-d H:i:s \n");
     } else {
+        if (!is_null($curl->proxyNum)) {
+            $error++;
+        }
         if ($html == -9) {
             $html = ' 发现不能刷就1分钟后检测一次';
             $isSleep = true;
@@ -33,6 +37,10 @@ while(true) {
         if ($isSleep) {
             sleep(60);
         }
+    }
+
+    if ($error > 100) {
+        break;
     }
     $i++;
 }
