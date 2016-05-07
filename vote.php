@@ -3,7 +3,7 @@ $root = dirname(__FILE__);
 require_once $root.'/curl.class.php';
 $curl = new Scurl();
 $curl->debug = true;
-$curl->isproxy = false;
+$curl->isproxy = true;
 $curl->isAutoProxy = true;
 
 $i = 0;
