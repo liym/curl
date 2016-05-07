@@ -6,8 +6,10 @@ $curl->debug = true;
 $curl->isproxy = true;
 $curl->isAutoProxy = true;
 $curl->agent = 'Mozilla/5.0 (Linux; Android 5.1.1; MX4 Pro Build/LMY48W) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile MQQBrowser/6.2 TBS/036215 Safari/537.36 MicroMessenger/6.3.16.49_r03ae324.780 NetType/WIFI Language/zh_CN';
-
+$opt = getopt('x:');
+$curl->proxyNum = isset($opt['x']) ? $opt['x'] : null;
 $i = 0;
+
 while(true) {
     $isSleep = false;
     $curl->post['cc'] = 25;

@@ -9,6 +9,7 @@
 
 class Scurl{
 
+    public $proxyNum = null;
 	public $isproxy = true;
 	public $isAutoProxy = false;
 	public $proxy='proxy.jgb:8081';
@@ -120,8 +121,8 @@ class Scurl{
 						exit('no proxy file :'. $root.$this->proxyfile);
 					}
 				}
-				$max=count($this->proxyArr)-1;
-				$this->proxy = trim($this->proxyArr[rand(0,$max)]);
+				$this->proxy = $this->getOkProxy();
+                
 			}
 			$proxyinfo=explode('@',$this->proxy);
 			if(isset($proxyinfo[1])){
@@ -208,4 +209,15 @@ class Scurl{
         return $newProxyArr;
     }
 
+    
+    public function getOkProxy()
+    {
+
+        if (!is_null($this->proxyNum) && isset($this->proxyArr[$this->proxyNum])) {
+            return trim($this->proxyArr[$this->proxyNum]);
+        } else {
+            $max = count($this->proxyArr)-1;
+            return trim($this->proxyArr[rand(0,$max)]);
+        }
+    }
 }
