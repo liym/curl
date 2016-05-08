@@ -177,7 +177,7 @@ class Scurl{
 			}else{
 				$str = http_build_query($this->post);
 			}
-			$this->cmd .= " -d '{$str}' ";
+			$this->cmd .= " --data-binary '{$str}' ";
 		}
 		$this->post='';	
 	}
