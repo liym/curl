@@ -214,8 +214,6 @@ class Scurl{
     
     public function getOkProxy()
     {
-
-        echo $this->proxyNum."\n";
         if ($this->proxyNum > count($this->proxyArr) && count($this->bestProxy) > 0) {
             $this->proxyNum = 0;
             $this->isBestProxy = true;

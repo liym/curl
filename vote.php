@@ -45,7 +45,7 @@ while(true) {
             unset($curl->bestProxy[$curl->proxy]);
         }
         if ($isSleep) {
-           // sleep(60);
+           sleep(60);
         }
     }
 

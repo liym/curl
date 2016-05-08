@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9fc23c9e-c674-43bd-ad8e-6f75329c806e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curl.class.php" afterPath="$PROJECT_DIR$/curl.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mulity_vote.php" afterPath="$PROJECT_DIR$/mulity_vote.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy.factory.php" afterPath="$PROJECT_DIR$/proxy.factory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy.list" afterPath="$PROJECT_DIR$/proxy.list" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy.test.list" afterPath="$PROJECT_DIR$/proxy.test.list" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vote.php" afterPath="$PROJECT_DIR$/vote.php" />
     </list>
     <ignored path="curl.iws" />
@@ -32,8 +28,8 @@
       <file leaf-file-name="curl.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/curl.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="217" column="32" selection-start-line="217" selection-start-column="32" selection-end-line="217" selection-end-column="32" />
+            <state relative-caret-position="108">
+              <caret line="215" column="5" selection-start-line="215" selection-start-column="5" selection-end-line="215" selection-end-column="5" />
               <folding>
                 <element signature="e#6#103#0#PHP" expanded="true" />
               </folding>
@@ -71,7 +67,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mulity_vote.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mulity_vote.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mulity_vote.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
@@ -95,7 +91,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="proxy.list" pinned="false" current-in-tab="true">
+      <file leaf-file-name="proxy.list" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proxy.list">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="594">
@@ -118,8 +114,8 @@
       <file leaf-file-name="vote.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vote.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+            <state relative-caret-position="540">
+              <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -142,9 +138,9 @@
         <option value="$PROJECT_DIR$/proxy.test.list" />
         <option value="$PROJECT_DIR$/proxy.factory.php" />
         <option value="$PROJECT_DIR$/mulity_vote.php" />
+        <option value="$PROJECT_DIR$/proxy.list" />
         <option value="$PROJECT_DIR$/vote.php" />
         <option value="$PROJECT_DIR$/curl.class.php" />
-        <option value="$PROJECT_DIR$/proxy.list" />
       </list>
     </option>
   </component>
@@ -630,12 +626,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1462618310761</updated>
-      <workItem from="1462618312597" duration="17453000" />
+      <workItem from="1462618312597" duration="18620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17453000" />
+    <option name="totallyTimeSpent" value="18620000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1246" height="777" extended-state="6" />
@@ -720,10 +716,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mulity_vote.php">
+    <entry file="file://$PROJECT_DIR$/proxy.list">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        <state relative-caret-position="594">
+          <caret line="1915" column="18" selection-start-line="3" selection-start-column="0" selection-end-line="1915" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vote.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -736,28 +740,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vote.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/curl.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="217" column="32" selection-start-line="217" selection-start-column="32" selection-end-line="217" selection-end-column="32" />
+        <state relative-caret-position="108">
+          <caret line="215" column="5" selection-start-line="215" selection-start-column="5" selection-end-line="215" selection-end-column="5" />
           <folding>
             <element signature="e#6#103#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proxy.list">
+    <entry file="file://$PROJECT_DIR$/mulity_vote.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="1915" column="18" selection-start-line="3" selection-start-column="0" selection-end-line="1915" selection-end-column="18" />
+        <state relative-caret-position="54">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
           <folding />
         </state>
       </provider>
