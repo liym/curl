@@ -84,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/vote.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+              <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -601,12 +601,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1462618310761</updated>
-      <workItem from="1462618312597" duration="22689000" />
+      <workItem from="1462618312597" duration="23049000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22689000" />
+    <option name="totallyTimeSpent" value="23049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1246" height="777" extended-state="6" />
@@ -740,7 +740,7 @@
     <entry file="file://$PROJECT_DIR$/vote.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+          <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
           <folding />
         </state>
       </provider>
