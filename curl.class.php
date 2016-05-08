@@ -12,6 +12,8 @@ class Scurl{
     public $proxyNum = null;
 	public $isproxy = true;
 	public $isAutoProxy = false;
+    public $isBestProxy = false;
+    public $bestProxy = [];
 	public $proxy='proxy.jgb:8081';
     public $proxyfile = '/proxy.list';
 	public $referer='';
@@ -213,9 +215,27 @@ class Scurl{
     public function getOkProxy()
     {
 
+        echo $this->proxyNum."\n";
+        if ($this->proxyNum > count($this->proxyArr) && count($this->bestProxy) > 0) {
+            $this->proxyNum = 0;
+            $this->isBestProxy = true;
+        }
+
+        if ($this->isBestProxy) {
+            $proxyArr = array_keys($this->bestProxy);
+            if (!isset($proxyArr[$this->proxyNum])) {
+                $this->isBestProxy = false;
+                $this->proxyNum = 0;
+                return trim($this->proxyArr[$this->proxyNum]);
+            }
+            return $proxyArr[$this->proxyNum];
+        }
         if (!is_null($this->proxyNum) && isset($this->proxyArr[$this->proxyNum])) {
             return trim($this->proxyArr[$this->proxyNum]);
         } else {
+            if ($this->proxyNum > count($this->proxyArr)) {
+                $this->proxyNum = 0;
+            }
             $max = count($this->proxyArr)-1;
             return trim($this->proxyArr[rand(0,$max)]);
         }

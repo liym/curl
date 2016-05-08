@@ -10,8 +10,8 @@ $proxyB = [];
 while(true) {
 	$proxyA = trim($proxy[$i]);
 	$curl->proxy = $proxyA;
-	//$curl->url = 'http://1212.ip138.com/ic.asp';
-    $curl->url = 'http://vote.ecloud-zj.com/wx/votetop';
+	$curl->url = 'http://1212.ip138.com/ic.asp';
+    //$curl->url = 'http://vote.ecloud-zj.com/wx/votetop';
 	$html = $curl->getStatus();
 	if ($html == 200) {
         echo ".";
